@@ -1,0 +1,1 @@
+# trading-pair-Market-forecasting-insight
