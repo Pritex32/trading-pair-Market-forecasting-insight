@@ -625,18 +625,6 @@ fig_hourly = px.line(x=hourly_open.index, y=hourly_open.values, title='Hourly Av
 fig_hourly.update_traces(line_color=colors['1h'])
 st.plotly_chart(fig_hourly)
 
-# plotting open and close chart
-col1,col1=st.columns(2)
-with col1:
-     volume=plt.figure(figsize=(15,10))
-     sns.lineplot(df['Volume'],color='grey',marker='*',markerfacecolor='white',label='Volume prices over time')
-     st.pyplot(volume)
-    
-    
-with col2:
-     high=plt.figure(figsize=(15,10))
-     sns.lineplot(df['low'],label='Low prices over time',color='black')
-     st.pyplot(high)
 
 # Addding footer
 
