@@ -628,13 +628,15 @@ st.plotly_chart(fig_hourly)
 # plotting open and close chart
 col1,col1=st.columns(2)
 with col1:
-    open_close=px.line(df,x='open',y='close',title='open values vs close values')
-    st.plotly_chart(open_close)
+     volume=plt.figure(figsize=(15,10))
+     sns.lineplot(df['Volume'],color='grey',marker='*',markerfacecolor='white',label='Volume prices over time')
+     st.pyplot(volume)
     
     
 with col2:
-    high_low=px.line(df,x='high',y='low',title='high values vs low values')
-    st.plotly_chart(high_low)
+     high=plt.figure(figsize=(15,10))
+     sns.lineplot(df['low'],label='Low prices over time',color='black')
+     st.pyplot(high)
 
 # Addding footer
 
