@@ -325,7 +325,7 @@ st.write('mean_squared_error',rmse)
 st.markdown('<h1><mark>FORECAST</mark></h1>', unsafe_allow_html=True)
 
 
-n_period = st.number_input(label='How many days of forecast?', min_value=1, value=30)
+n_period = st.number_input(label='How many days of forecast?', min_value=1, value=10)
 
 
 
